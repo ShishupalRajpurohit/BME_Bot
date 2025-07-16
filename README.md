@@ -59,7 +59,7 @@ Using a powerful combination of **LangChain**, **Streamlit**, **FAISS**, and ope
 
 ```bash
 # 1. Clone this repository
-git clone https://github.com/yourusername/BME_Bot.git
+git clone https://github.com/ShishupalRajpurohit/BME_Bot.git
 cd BME_Bot
 
 # 2. Install dependencies
@@ -81,11 +81,11 @@ streamlit run bme_bot.py
 ```text
 👨‍🔧 Engineer: How to fix conductivity error in dialysis machine?
 🤖 BME_Bot: Start by verifying the calibration via the 'Conductivity Check' section...
-             [Source: Dialysis_Manual_Page_12]
+             [Source: Fresenius 4008 Hemodialysis System - Technical manual.pdf]
 
 🩺 User: What is hemodialysis?
 🤖 BME_Bot: Hemodialysis is a process that filters blood using a dialyzer...
-             [Source: Medical_Guide.pdf]
+             [Source: The_GALE_ENCYCLOPEDIA_of_MEDICINE_SECOND.pdf]
 ```
 
 ---
@@ -97,11 +97,6 @@ streamlit run bme_bot.py
 - ✅ Runs **locally** with Streamlit
 - ✅ **Extendable** to other medical devices or hospital systems
 
----
-
-## 📄 License
-
-This project is open-source under the [MIT License](LICENSE).
 
 ---
 
@@ -114,4 +109,4 @@ This project is open-source under the [MIT License](LICENSE).
 
 ---
 
-> ⚕️ Built with ❤️ by a Biomedical Engineer for the Biomedical community.
+> ⚕️ Built with ❤️ by a Former Biomedical Engineer for the Biomedical community.
