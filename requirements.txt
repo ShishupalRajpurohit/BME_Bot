@@ -1,0 +1,23 @@
+# LangChain Core
+langchain
+langchain-core
+langchain-community
+
+# Hugging Face Integration
+langchain-huggingface
+transformers
+huggingface-hub
+sentence-transformers
+
+# Groq LLM
+langchain-groq
+
+# Environment Variable Management
+python-dotenv
+
+# Web App Framework
+streamlit
+
+#other
+pypdf
+faiss-cpu
