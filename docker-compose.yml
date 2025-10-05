@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  bme-bot:
+    build: .
+    container_name: bme_bot
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./vectorstore:/app/vectorstore
+      - ./logs:/app/logs
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - HUGGINGFACEHUB_API_TOKEN=${HUGGINGFACEHUB_API_TOKEN}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

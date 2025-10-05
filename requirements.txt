@@ -1,0 +1,35 @@
+# Core dependencies
+streamlit
+python-dotenv
+
+# LangChain ecosystem
+langchain
+langchain-community
+langchain-core
+langchain-huggingface
+langchain-groq
+
+# Vector store and embeddings
+faiss-cpu
+sentence-transformers
+
+# Document processing
+pypdf
+unstructured
+unstructured[pdf]
+pillow
+pytesseract
+
+# Utilities
+requests
+numpy
+
+# Development dependencies (optional - for local testing)
+pytest
+pytest-cov
+black
+flake8
+mypy
+
+# Production server (optional - for deployment)
+gunicorn
