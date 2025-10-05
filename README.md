@@ -1,8 +1,8 @@
 # 🔬 BME Bot - Biomedical Engineering AI Assistant
 
-[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.31-FF4B4B.svg)](https://streamlit.io)
-[![LangChain](https://img.shields.io/badge/LangChain-0.1-green.svg)](https://langchain.com)
+[![Python 3.11+](https://img.shields.io/badge/python-3.13+-blue.svg)](https://www.python.org/downloads/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.50-FF4B4B.svg)](https://streamlit.io)
+[![LangChain](https://img.shields.io/badge/LangChain-3.27-green.svg)](https://langchain.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.txt)
 
 A production-ready, RAG-powered chatbot specialized in biomedical engineering topics. Built with LangChain, FAISS, and Groq LLM for intelligent document-based question answering.
@@ -20,29 +20,32 @@ A production-ready, RAG-powered chatbot specialized in biomedical engineering to
 ## 🏗️ Architecture
 
 ```
+
 ┌─────────────┐
 │   User UI   │  (Streamlit)
 └──────┬──────┘
-       │
+│
 ┌──────▼──────────────┐
 │   QA Chain Manager  │
 │  (LangChain + Groq) │
 └──────┬──────────────┘
-       │
+│
 ┌──────▼──────────────┐
 │ Vector Store (FAISS)│
 │   + Embeddings      │
 └──────┬──────────────┘
-       │
+│
 ┌──────▼──────────────┐
 │  PDF Documents      │
 │  (Technical Docs)   │
 └─────────────────────┘
+
 ```
 
 ## 📁 Project Structure
 
 ```
+
 BME_Bot/
 ├── app.py                      # Main Streamlit application
 ├── config.py                   # Centralized configuration
@@ -51,21 +54,21 @@ BME_Bot/
 ├── docker-compose.yml          # Docker Compose configuration
 │
 ├── core/                       # Core functionality modules
-│   ├── __init__.py
+│   ├── **init**.py
 │   ├── vectorstore.py         # FAISS vector store management
 │   ├── qa_chain.py            # QA chain operations
 │   └── document_processor.py   # PDF processing & chunking
 │
 ├── utils/                      # Utility modules
-│   ├── __init__.py
+│   ├── **init**.py
 │   └── logger.py              # Logging configuration
 │
 ├── scripts/                    # Utility scripts
-│   ├── __init__.py
+│   ├── **init**.py
 │   └── build_vectorstore.py   # Index documents script
 │
 ├── tests/                      # Unit tests
-│   ├── __init__.py
+│   ├── **init**.py
 │   └── test_qa.py             # Test suite
 │
 ├── data/                       # PDF documents (add your files here)
@@ -77,13 +80,14 @@ BME_Bot/
 ├── .gitignore                 # Git ignore rules
 ├── LICENSE.txt                # MIT License
 └── README.md                  # This file
-```
+
+````
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 
-- Python 3.11+
+- Python 3.13+
 - Groq API Key ([Get one free](https://console.groq.com))
 - PDF documents for your knowledge base
 
@@ -91,39 +95,45 @@ BME_Bot/
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/bme-bot.git
-cd bme-bot
-```
+gh repo clone https://github.com/ShishupalRajpurohit/BME_Bot
+cd BME_Bot
+````
 
 2. **Create virtual environment**
+
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
 3. **Install dependencies**
+
 ```bash
 pip install -r requirements.txt
 ```
 
 4. **Set up environment variables**
+
 ```bash
 cp .env.example .env
 # Edit .env and add your GROQ_API_KEY
 ```
 
 5. **Add your PDF documents**
+
 ```bash
 # Place PDF files in the data/ directory
 cp your_documents.pdf data/
 ```
 
 6. **Build vector store**
+
 ```bash
 python scripts/build_vectorstore.py
 ```
 
 7. **Run the application**
+
 ```bash
 streamlit run app.py
 ```
@@ -161,29 +171,7 @@ docker run -p 8501:8501 \
 
 ## ☁️ Deploy to Streamlit Cloud
 
-1. **Fork this repository**
-
-2. **Go to [Streamlit Cloud](https://streamlit.io/cloud)**
-
-3. **Create new app**:
-   - Repository: `your-username/bme-bot`
-   - Branch: `main`
-   - Main file: `app.py`
-
-4. **Add secrets** (in Streamlit Cloud dashboard):
-```toml
-GROQ_API_KEY = "your_groq_api_key_here"
-```
-
-5. **Build vector store** locally and commit:
-```bash
-python scripts/build_vectorstore.py
-git add vectorstore/
-git commit -m "Add vector store"
-git push
-```
-
-6. **Deploy!** 🎉
+*(Link/details to be added later)*
 
 ## 🧪 Testing
 
@@ -218,20 +206,23 @@ CHUNK_OVERLAP = 50                            # Chunk overlap
 ## 🎯 Usage Examples
 
 ### Technical Q&A
+
 ```
 User: What are the key components of an ECG machine?
 Bot: Based on the documentation, an ECG machine consists of...
 ```
 
 ### Casual Chat
+
 ```
 User: Hello! How are you?
 Bot: Hello! I'm doing great, thank you for asking! How can I help you today?
 ```
 
 ### Troubleshooting
+
 ```
-User: How do I calibrate a blood pressure monitor?
+User: How do I calibrate a dialysis machine?
 Bot: According to the manual, calibration involves these steps:
 1. ...
 2. ...
@@ -240,12 +231,14 @@ Bot: According to the manual, calibration involves these steps:
 ## 🔧 Troubleshooting
 
 ### Vector Store Not Found
+
 ```bash
 # Rebuild the vector store
 python scripts/build_vectorstore.py
 ```
 
 ### OCR Issues
+
 ```bash
 # Install Tesseract OCR
 # Ubuntu/Debian
@@ -259,30 +252,31 @@ brew install tesseract
 ```
 
 ### API Key Errors
-- Verify your `.env` file exists
-- Check that `GROQ_API_KEY` is set correctly
-- Ensure no quotes around the key value
+
+* Verify your `.env` file exists
+* Check that `GROQ_API_KEY` is set correctly
+* Ensure no quotes around the key value
 
 ## 📊 Performance
 
-- **Response Time**: ~2-4 seconds per query
-- **Accuracy**: Depends on document quality
-- **Uptime**: 99%+ with proper deployment
-- **Concurrent Users**: Supports multiple users (Streamlit limitation)
+* **Response Time**: ~2-4 seconds per query
+* **Accuracy**: Depends on document quality
+* **Uptime**: 99%+ with proper deployment
+* **Concurrent Users**: Supports multiple users (Streamlit limitation)
 
 ## 🛠️ Technology Stack
 
-| Component | Technology |
-|-----------|-----------|
-| **Frontend** | Streamlit |
-| **LLM** | Groq (DeepSeek R1 Distill) |
-| **Embeddings** | HuggingFace (MiniLM) |
-| **Vector Store** | FAISS |
-| **Framework** | LangChain |
-| **Document Processing** | PyPDF + Unstructured |
-| **Logging** | Python logging |
-| **Testing** | Pytest |
-| **Containerization** | Docker |
+| Component               | Technology                 |
+| ----------------------- | -------------------------- |
+| **Frontend**            | Streamlit                  |
+| **LLM**                 | Groq (DeepSeek R1 Distill) |
+| **Embeddings**          | HuggingFace (MiniLM)       |
+| **Vector Store**        | FAISS                      |
+| **Framework**           | LangChain                  |
+| **Document Processing** | PyPDF + Unstructured       |
+| **Logging**             | Python logging             |
+| **Testing**             | Pytest                     |
+| **Containerization**    | Docker                     |
 
 ## 🤝 Contributing
 
@@ -300,23 +294,26 @@ This project is licensed under the MIT License - see [LICENSE.txt](LICENSE.txt) 
 
 ## 👤 Author
 
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- Portfolio: [yourportfolio.com](https://yourportfolio.com)
+**Shishupal Rajpurohit**
+
+* GitHub: [@ShishupalRajpurohit](https://github.com/ShishupalRajpurohit)
+* LinkedIn: [Shishupal Rajpurohit](https://www.linkedin.com/in/shishupal-rajpurohit-039290190/)
+* Portfolio: [Portfolio](https://sites.google.com/view/shishupals-portfolio/home)
 
 ## 🙏 Acknowledgments
 
 - [LangChain](https://langchain.com) for the RAG framework
 - [Groq](https://groq.com) for fast LLM inference
+- [DeepSeek R1 Distill LLaMA 70B](https://www.groq.com/) for the model used in this project
+- [HuggingFace MiniLM](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) for embeddings
 - [Streamlit](https://streamlit.io) for the web framework
 - [FAISS](https://github.com/facebookresearch/faiss) for vector similarity search
 
 ## 📞 Support
 
-- 📧 Email: your.email@example.com
-- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/bme-bot/issues)
-- 💬 Discussions: [GitHub Discussions](https://github.com/yourusername/bme-bot/discussions)
+* 📧 Email: [shishupalrajpurohit2000@gmail.com](mailto:shishupalrajpurohit2000@gmail.com)
+* 🐛 Issues: [GitHub Issues](https://github.com/ShishupalRajpurohit/BME_Bot/issues)
+* 💬 Discussions: [GitHub Discussions](https://github.com/ShishupalRajpurohit/BME_Bot/discussions)
 
 ---
 
