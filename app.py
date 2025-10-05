@@ -234,7 +234,7 @@ def main():
             'role': 'assistant',
             'content': Config.INITIAL_MESSAGE
         })
-    
+
     # Chat input
     if user_input := st.chat_input("Ask me anything about biomedical engineering..."):
         process_user_query(qa_manager, user_input)
