@@ -47,7 +47,7 @@ class VectorStoreManager:
         
         Returns:
             Loaded FAISS vector store
-            
+             
         Raises:
             FileNotFoundError: If vector store doesn't exist
             Exception: For other loading errors
