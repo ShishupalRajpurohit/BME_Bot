@@ -11,16 +11,18 @@ A production-ready, RAG-powered chatbot specialized in biomedical engineering to
 
 ## 🎥 Demo Preview
 
-<!-- Centered GIF -->
 <div align="center">
-  <img src="assets/BME_Bot_Demo.mp4" width="600" />
+  <video controls>
+    <source src="assets/BME_Bot_Demo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 </div>
 
-<!-- Side by side PNGs -->
 <div align="center">
-  <img src="assets/BME_Bot_1.png" width="45%" style="margin-right:2%;" />
-  <img src="assets/BME_Bot_2.png" width="45%" />
+  <img src="assets/BME_Bot_1.png" width="49%" style="margin-right:2%;" />
+  <img src="assets/BME_Bot_2.png" width="49%" />
 </div>
+
 
 
 
