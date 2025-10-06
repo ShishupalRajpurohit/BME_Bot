@@ -10,9 +10,19 @@
 A production-ready, RAG-powered chatbot specialized in biomedical engineering topics. Built with LangChain, FAISS, and Groq LLM for intelligent document-based question answering.
 
 ## 🎥 Demo Preview
-![BME Bot Demo](assets/BME_Bot_Demo.gif)
-![BME Bot Screenshot](assets/BME_Bot_1.gif)
-![BME Bot Screenshot](assets/BME_Bot_2.gif)
+
+<!-- Centered GIF -->
+<div align="center">
+  <img src="assets/BME_Bot_Demo.mp4" width="600" />
+</div>
+
+<!-- Side by side PNGs -->
+<div align="center">
+  <img src="assets/BME_Bot_1.png" width="45%" style="margin-right:2%;" />
+  <img src="assets/BME_Bot_2.png" width="45%" />
+</div>
+
+
 
 ## 🌟 Features
 
