@@ -1,11 +1,18 @@
 # 🔬 BME Bot - Biomedical Engineering AI Assistant
 
+[![Live Demo](https://img.shields.io/badge/Live-Demo-important?style=flat&logo=streamlit)](https://bmebot.streamlit.app/)
 [![Python 3.11+](https://img.shields.io/badge/python-3.13+-blue.svg)](https://www.python.org/downloads/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.50-FF4B4B.svg)](https://streamlit.io)
 [![LangChain](https://img.shields.io/badge/LangChain-3.27-green.svg)](https://langchain.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.txt)
 
+
 A production-ready, RAG-powered chatbot specialized in biomedical engineering topics. Built with LangChain, FAISS, and Groq LLM for intelligent document-based question answering.
+
+## 🎥 Demo Preview
+![BME Bot Demo](assets/BME_Bot_Demo.gif)
+![BME Bot Screenshot](assets/BME_Bot_1.gif)
+![BME Bot Screenshot](assets/BME_Bot_2.gif)
 
 ## 🌟 Features
 
@@ -169,9 +176,10 @@ docker run -p 8501:8501 \
   bme-bot
 ```
 
-## ☁️ Deploy to Streamlit Cloud
+## 🌐 Live Demo (☁️ Deployment to Streamlit Cloud)
 
-*(Link/details to be added later)*
+Try the BME Bot live here: [BME Bot Demo](https://bmebot.streamlit.app/)
+
 
 ## 🧪 Testing
 
