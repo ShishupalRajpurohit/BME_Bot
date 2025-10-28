@@ -27,7 +27,7 @@ class Config:
     
     # Model configurations
     EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
-    LLM_MODEL = "deepseek-ai/DeepSeek-R1"
+    LLM_MODEL = "llama-3.3-70b-versatile"
     LLM_TEMPERATURE = 0.0
     
     # Retrieval configurations
